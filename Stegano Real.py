@@ -289,11 +289,11 @@ def importimg1(): #Fonction importimg1
 		s=s+1
 	s=0
 	for i in ghex2fort :  # On fait la même chose avec les Verts
-		bhex3.append("0b"+bhex1fort[s]+bhex2fort[s])
+		ghex3.append("0b"+ghex1fort[s]+ghex2fort[s])
 		s=s+1
 	s=0
 	for i in bhex2fort : # Avec les bleus
-		ghex3.append("0b"+ghex1fort[s]+ghex2fort[s])
+		bhex3.append("0b"+bhex1fort[s]+bhex2fort[s])
 		s=s+1
 	s=0
 	for i in ahex2fort : # Avec le canal alpha
