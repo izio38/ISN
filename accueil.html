@@ -4,9 +4,9 @@
 <link rel="icon" type="image/ico" href="favicon.ico" /> <!--Insersion d'un favicon-->
 <link href="bootstrap.min.css" rel="stylesheet"> <!--Importation bootstrap-->
 <title>Sonagets - accueil</title> <!--Donne un nom à la page-->
-<meta charset="utf-8"> <!---->
-<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!---->
-<meta name="viewport" content="width=device-width, initial-scale=1"> <!---->
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Déclaration de l'encodage-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 	<body>
 		<style>
@@ -16,26 +16,26 @@ body
 	
 }
 		</style>
-		<div class="navbar navbar-inverse "> <!---->
-		<div class="container-fluid"> <!---->
-		<div class="row"> <!---->
-		<div class="col-lg-2" ></div> <!---->
-		<div class="navbar-header"> <!---->
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <!---->
-			<span class="sr-only">Navigation</span> <!---->
+		<div class="navbar navbar-inverse "> <!--Inclut une barre de navigation-->
+		<div class="container-fluid"> 
+		<div class="row"> <!--Créé une ligne-->
+		<div class="col-lg-2" ></div> <!--Créé une colone-->
+		<div class="navbar-header"> 
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <!--Création d'un bouton-->
+			<span class="sr-only"></span> 
 			</button> 
 		<a class="navbar-brand" href="accueil.html">Sonagets</a> <!--Renvoit à la page accueil-->
-			<ul class="nav navbar-nav"> <!---->
-			<li class="active"> <!---->
+			<ul class="nav navbar-nav">
+			<li class="active"> 
 			<li><a href="inscription.html">Inscription</a></li> <!--Renvoit à la page inscription-->
 			<li><a href="contact.html">Contact</a></li> <!--Renvoit à la page contact-->
 			</ul>
 		</div>
-			<form class="navbar-form navbar-right inline-form"> <!---->
-		<div class="form-group"> <!---->
-			<input type="email" class="input-sm form-control" id="inputEmail3" placeholder="Adresse mail"> <!---->
-			<input type="password" class="input-sm form-control" id="inputPassword3" placeholder="Mot de passe"> <!---->
-			<button type="submit" class="btn btn-primary btn-sm">Connexion</span></button> <!---->
+			<form class="navbar-form navbar-right inline-form"> <!--Renvoit à droite de la barre de navigation-->
+		<div class="form-group"> 
+			<input type="email" class="input-sm form-control"  placeholder="Adresse mail"> <!--Créé zone de saisie de l'adresse mail-->
+			<input type="password" class="input-sm form-control" placeholder="Mot de passe"> <!--Créé zone de saisie du mot de passe-->
+			<button type="submit" class="btn btn-primary btn-sm">Connexion</span></button> <!--Créé le bouton "connexion"-->
 		</div>
 		</form>
 		</div>
@@ -44,12 +44,12 @@ body
 <br>
 
 <center><div id="div_horloge"></div></center> <!--Appel la fonction div_horloge-->
- <script type="text/javascript"> <!---->
-window.onload=function() { <!---->
-  horloge('div_horloge'); <!---->
+ <script type="text/javascript"> <!--Déclare le javascript-->
+window.onload=function() { 
+  horloge('div_horloge'); 
 };
  
-function horloge(el) { <!---->
+function horloge(el) { <!--Création de la fonction "horloge"-->
   if(typeof el=="string") { el = document.getElementById(el); } <!---->
   function actualiser() { <!---->
     var date = new Date(); <!---->
@@ -86,7 +86,7 @@ et que l'on en modifie les bits codants faibles, on obtient un pixel légèremen
 			<div class="row">
 				<article class="col-lg-20">
 			<aside>
-				<center><button action="/sonagets.py" class="btn btn-info btn-lg">Téléchargement</button></center>
+				<center><button action="/sonagets.py" class="btn btn-info btn-lg">Téléchargement</button></center> <!--Création d'un bouton téléchargement en milieu de page-->
 			</aside>
 				</article>
 				<article class="col-lg-20">
@@ -98,15 +98,15 @@ et que l'on en modifie les bits codants faibles, on obtient un pixel légèremen
 (visuellement). Vous pourrez à ce moment là tout simplement la concerver, ou l'envoyer à quelqu'un utilisant Sonagets.
 Le logiciel fera ensuite le travail inverse qui consiste à récupérer l'image chachée.
 <br>
-	<h5>Bonne utilisation :)</h5></p>
+	<h5>Bonne utilisation :)</h5></p> <!--Justifie le texte-->
 <br><br>	
 				</article>
-				<article class="col-lg-15">
-					<img src="danger.png"style="width: 60px;"></center>
+				<article class="col-lg-20">
+					<center><img src="danger.png"style="width: 60px;"></center> <!--Affiche l'image au centre-->
 				</article>
 				<article class="col-lg-20">
 					<p align="justify">Sonagets ne permet pas de dissimuler totalement une image. En effet, l'image peut être soumise à un logiciel chargé de traquer les bruits de fond, au quel cas il
-sera assez facile de repérer une image stéganographiée et d'effectuer une tentative de récupération de celle-ci.</p>
+sera assez facile de repérer une image stéganographiée et d'effectuer une tentative de récupération de celle-ci.</p> <!--Justifie le texte-->
 				</article>
 			</div>
 			</div>
@@ -121,11 +121,11 @@ sera assez facile de repérer une image stéganographiée et d'effectuer une ten
   margin-top:200px;
 }
 		</style>
-			<div id="footer" class="navbar-fixed-bottom">
+			<div id="footer" class="navbar-fixed-bottom"> <!-- Créé un pied de page-->
 			<div class="container navbar-fixed-bottom">
 				<h5>Copyright &copy;  &beta;&alpha;&sigma;&tau;&iota;&epsilon;&nu; &amp; &rho;&omicron;&mu;&alpha;&iota;&nu;</h5>
 			<ul class="nav pull-right scroll-top">
-		<li><button class="btn  btn-info btn-lg " ><a href="#" title="Retour haut de page"> <p>&uarr; Retour haut de page &uarr;</p></a></li></button>
+		<li><button class="btn  btn-info btn-lg " ><a href="#" title="Retour haut de page"> <p>&uarr; Retour haut de page &uarr;</p></a></li></button> <!--Créé un bouton "retour en haut de page"-->
   
 			</ul>
 			</div>

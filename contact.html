@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<link rel="icon" type="image/ico" href="favicon.ico" />
-<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]--> 
-<link href="bootstrap.min.css" rel="stylesheet"> 
-<title>Sonagets - accueil</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" type="image/ico" href="favicon.ico" /> <!--Insersion d'un favicon-->
+<link href="bootstrap.min.css" rel="stylesheet"> <!--Importation bootstrap-->
+<title>Sonagets - accueil</title> <!--Donne un nom à la page-->
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Déclaration de l'encodage-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
-<body>
-	<style>
+	<body>
+		<style>
 body
 {
-	background-color : #EFE6D4;
+	background-color : #EFE6D4; <!--Définit la couleur de fond-->
 	
 }
-	</style>
-	<div class="navbar navbar-inverse ">
-	<div class="container-fluid">
-	<div class="row">
-	<div class="col-lg-2" ></div>
-	<div class="navbar-header">
-	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-	<span class="sr-only">Navigation</span>
-	</button>
-	<a class="navbar-brand" href="accueil.html">Sonagets</a>
-		<ul class="nav navbar-nav">
-		<li class="active">
-		<li><a href="inscription.html">Inscription</a></li>
-		<li><a href="contact.html">Contact</a></li>
-		</ul>
-	</div>
-	<form class="navbar-form navbar-right inline-form">
-	<div class="form-group">
-		<input type="email" class="input-sm form-control" id="inputEmail3" placeholder="Adresse mail">
-		<input type="password" class="input-sm form-control" id="inputPassword3" placeholder="Mot de passe">
-		<button type="submit" class="btn btn-primary btn-sm">Connexion</span></button>
-	</div>
-	</form>
-	</div>
-	</div>
-	</div>
+		</style>
+		<div class="navbar navbar-inverse "> <!--Inclut une barre de navigation-->
+		<div class="container-fluid"> 
+		<div class="row"> <!--Créé une ligne-->
+		<div class="col-lg-2" ></div> <!--Créé une colone-->
+		<div class="navbar-header"> 
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <!--Création d'un bouton-->
+			<span class="sr-only"></span> 
+			</button> 
+		<a class="navbar-brand" href="accueil.html">Sonagets</a> <!--Renvoit à la page accueil-->
+			<ul class="nav navbar-nav">
+			<li class="active"> 
+			<li><a href="inscription.html">Inscription</a></li> <!--Renvoit à la page inscription-->
+			<li><a href="contact.html">Contact</a></li> <!--Renvoit à la page contact-->
+			</ul>
+		</div>
+			<form class="navbar-form navbar-right inline-form"> <!--Renvoit à droite de la barre de navigation-->
+		<div class="form-group"> 
+			<input type="email" class="input-sm form-control"  placeholder="Adresse mail"> <!--Créé zone de saisie de l'adresse mail-->
+			<input type="password" class="input-sm form-control" placeholder="Mot de passe"> <!--Créé zone de saisie du mot de passe-->
+			<button type="submit" class="btn btn-primary btn-sm">Connexion</span></button> <!--Créé le bouton "connexion"-->
+		</div>
+		</form>
+		</div>
+		</div>
+		</div>
 <br>
 
-<center><div id="div_horloge"></div></center>
- <script type="text/javascript">
-window.onload=function() {
-  horloge('div_horloge');
+<center><div id="div_horloge"></div></center> <!--Appel la fonction div_horloge-->
+ <script type="text/javascript"> <!--Déclare le javascript-->
+window.onload=function() { 
+  horloge('div_horloge'); 
 };
  
-function horloge(el) {
-  if(typeof el=="string") { el = document.getElementById(el); }
-  function actualiser() {
-    var date = new Date();
-    var str = date.getHours();
-    str += ':'+(date.getMinutes()<10?'0':'')+date.getMinutes();
-    str += ':'+(date.getSeconds()<10?'0':'')+date.getSeconds();
-    el.innerHTML = str;
+function horloge(el) { <!--Création de la fonction "horloge"-->
+  if(typeof el=="string") { el = document.getElementById(el); } <!---->
+  function actualiser() { <!---->
+    var date = new Date(); <!---->
+    var str = date.getHours(); <!---->
+    str += ':'+(date.getMinutes()<10?'0':'')+date.getMinutes(); <!---->
+    str += ':'+(date.getSeconds()<10?'0':'')+date.getSeconds(); <!---->
+    el.innerHTML = str; <!---->
   }
   actualiser();
-  setInterval(actualiser,1000); // permet d'appeler la fonction toutes les secondes
+  setInterval(actualiser,1000); <!--permet d'appeler la fonction toutes les secondes-->
 }
 
 </script>
