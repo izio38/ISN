@@ -1,0 +1,19 @@
+L'application que nous avons voulu créer pour notre projte utilise la stéganographie, c'est à dire le principe de dissimuler des données dans d'autres données, une image dans une autre image.
+En effet, la stéganographie en informatique consiste à cacher un message (ou une image dans notre cas) dans un autre ficher qui peut être une image ou un fichier son par exemple. Le principe
+est simple: on supprime des données inutiles ou peu utiles pour les remplacer par les données à cacher. Par exemple, si l'on prend une image dont chaque pixel est codé sur 24 bits
+et que l'on en modifie les bits codants faibles, on obtient un pixel légèrement modifié mais inchangé pour l'oeil humain. C'est le principe qu'utilisera notre logiciel.
+Nous avons choisi le nom Sonagets à notre logiciel puisqu'il fait référence à la stéganographie (Stéganos à l'envers)
+
+Partage des taches:
+Romain: codage du logiciel de stéganographie, partie encodage et décodage. 
+Bastien: progammation du site internet et de l'invité de commande
+Durant tout la période du projet nous nous somme entraidé à défault d'avoir travaillé ensemble.
+Langages utilisés: python, html, java
+
+
+Problèmes rencontrés: Nous avons rencontré de nombreux problème lors du compilage de l'algorythme ainsi que du design du site internet. algorithme permettant l'extraction des bits codant faibles pour les mettre dans la partie des bits codant faible d'une autre image. Image de mauvaise qualité lors d'un codage en hexadécimal, reprise du code pour une répartition des bits en octets.
+Barre de navigation du site internet, conception du design du site
+
+Nous avons fait le choix de créer un site internet en lien avec notre application pour diverses raisons, tout d'abords pour exploiter et approfondir nos connaisances en html mais aussi pour étendre notre travail sur plusieurs secteurs (python, html), ainsi, notre site permet d'acceder à notre logiciel de stéganographie, de plus il apporte des explications sur le principe de celui-ci et sur l'utilisation du logiciel. De plus l'onglet contact aurait du permettre à l'utilisateur d'envoyer son avis ou de posser une question à l'un d'entre nous quant à l'utilisation de logiciel. Le but de notre site est aussi d'avoir la possibilité d'être en lien avec l'utilisateur de Sonagets, en effet, il peut permettre la diffusion du logiciel dans le ca où le site serait mi en ligne sur un serveur.
+Nous avons choisis ce projet parce qu'il nous semblait interessant et complet, en effet, la stéganographie nous interessait tout les deux, nous n'étions pas sûr au début du projet d'arriver à cacher une image dans une autre image mais nous voulions quand même nous lancer dans ce projet. Créer un logiciel permettant de cacher une image dans une autre sans que celle-ci soit visible à l'oeil nu apres traitement nous parraissait cultivant. 
+Nous avons malheuresement pas pu finir notre projet comme nous l'aurions souhaité, c'est à dire avec une interface utilisateur plus complete, mieu finie, et un site internet plus constuit et expliqaunt mieu les principes de notre logiciel. Ainsi nous aurions aimé avoir un site internet permettant la création d'un compte avec la saisie des informations de l'utilisateur, la collecte et l'enregistrement de ceux-ci. Ainsi on aurait pu créer une base de donnée qui aurait été interogée lors d'une connexion ultrieure de l'utilasateur. Cette connexion aurait du lui permettre de télécharger le logiciel et de lui en donner l'acces. En effet, sans cette inscription préalable, le téléchargement et l'utilisation auraient été impossible. Mais faute de temps cela n'a pas été possible à créer. De plus, le fait d'avoir un compte aurait pu permis d'envoyer une image (contenant une image caché) à un autre utilisateur par le biais du site internet, au lieu de l'envoyer par un autre moyen.
