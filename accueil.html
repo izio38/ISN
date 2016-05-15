@@ -1,136 +1,138 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<link rel="icon" type="image/ico" href="favicon.ico" />
-<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]--> 
-<link href="bootstrap.min.css" rel="stylesheet">  // importation du css (bootstrap)
-<title>Sonagets - accueil</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<link rel="icon" type="image/ico" href="favicon.ico" /> <!--Insersion d'un favicon-->
+<link href="bootstrap.min.css" rel="stylesheet"> <!--Importation bootstrap-->
+<title>Sonagets - accueil</title> <!--Donne un nom à la page-->
+<meta charset="utf-8"> <!---->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!---->
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!---->
 </head>
-<body>
-<div class="navbar navbar-inverse navbar-fixed-top">
-<div class="container">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-<span class="sr-only">Navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-
-
-</button>
-<a class="navbar-brand" href="accueil.html">Sonagets</a>
-</div>
-<div id="navbar" class="collapse navbar-collapse">
-<ul class="nav navbar-nav">
-<li class="active">
-<li><a href="inscription.html">Inscription</a></li>
-<li><a href="contact.html">Contact</a></li>
-
-
-<form class="form-horizontal">
-		<div class="form-group">
-			<label for="inputEmail3" class="row-lg-3 control-label"></label>
-			<div class="row-lg-3">
-				<label for="inputEmail3" class="row-lg-3 control-label">Adresse mail</label>
-			<input type="email" class="form-control" id="inputEmail3" placeholder="Adresse mail">
-			</div>
+	<body>
+		<style>
+body
+{
+	background-color : #EFE6D4; <!--Définit la couleur de fond-->
+	
+}
+		</style>
+		<div class="navbar navbar-inverse "> <!---->
+		<div class="container-fluid"> <!---->
+		<div class="row"> <!---->
+		<div class="col-lg-2" ></div> <!---->
+		<div class="navbar-header"> <!---->
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <!---->
+			<span class="sr-only">Navigation</span> <!---->
+			</button> 
+		<a class="navbar-brand" href="accueil.html">Sonagets</a> <!--Renvoit à la page accueil-->
+			<ul class="nav navbar-nav"> <!---->
+			<li class="active"> <!---->
+			<li><a href="inscription.html">Inscription</a></li> <!--Renvoit à la page inscription-->
+			<li><a href="contact.html">Contact</a></li> <!--Renvoit à la page contact-->
+			</ul>
 		</div>
-  <div class="form-group">
-	<label for="inputPassword3" class="col-md-5 control-label">Mot de passe</label>
-		<div class="col-md-5">
-			<input type="password" class="form-control" id="inputPassword3" placeholder="Mot de passe">
+			<form class="navbar-form navbar-right inline-form"> <!---->
+		<div class="form-group"> <!---->
+			<input type="email" class="input-sm form-control" id="inputEmail3" placeholder="Adresse mail"> <!---->
+			<input type="password" class="input-sm form-control" id="inputPassword3" placeholder="Mot de passe"> <!---->
+			<button type="submit" class="btn btn-primary btn-sm">Connexion</span></button> <!---->
 		</div>
-  </div>
- 
-  <div class="form-group">
-    <div class="col-md-offset-2 col-md-10">
-      <div class="checkbox">
-        <label>
-          <input type="checkbox"> Se souvenir de moi
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-md-offset-2 col-md-10">
-      <button type="submit" class="btn btn-default">Connexion</button>
-    </div>
-  </div>
-</form>
+		</form>
+		</div>
+		</div>
+		</div>
+<br>
 
-
-</ul>
-</div><!--/.nav-collapse -->
-</div>
-</div>
-<div class="container">
-<div class="starter-template">
-	<br><br><br>
-<center><div id="div_horloge"></div></center>
- 
-<script type="text/javascript">
-window.onload=function() {
-  horloge('div_horloge');
+<center><div id="div_horloge"></div></center> <!--Appel la fonction div_horloge-->
+ <script type="text/javascript"> <!---->
+window.onload=function() { <!---->
+  horloge('div_horloge'); <!---->
 };
  
-function horloge(el) {
-  if(typeof el=="string") { el = document.getElementById(el); }
-  function actualiser() {
-    var date = new Date();
-    var str = date.getHours();
-    str += ':'+(date.getMinutes()<10?'0':'')+date.getMinutes();
-    str += ':'+(date.getSeconds()<10?'0':'')+date.getSeconds();
-    el.innerHTML = str;
+function horloge(el) { <!---->
+  if(typeof el=="string") { el = document.getElementById(el); } <!---->
+  function actualiser() { <!---->
+    var date = new Date(); <!---->
+    var str = date.getHours(); <!---->
+    str += ':'+(date.getMinutes()<10?'0':'')+date.getMinutes(); <!---->
+    str += ':'+(date.getSeconds()<10?'0':'')+date.getSeconds(); <!---->
+    el.innerHTML = str; <!---->
   }
   actualiser();
-  setInterval(actualiser,1000); // permet d'appeler la fonction toutes les secondes
+  setInterval(actualiser,1000); <!--permet d'appeler la fonction toutes les secondes-->
 }
 
 </script>
-<br><br>
 
-
-<p class="lead"><center><h1>Qu'est ce que Sonagets ? </h1></center>
-<br><br>
-C'est un logiciel utilisant la stéganographie. C'est à dire l'art de dissimuler des données dans d'autres données, une image dans une autre image dans la cas de Sonagets.
-En effet, la stéganographie en informatique consiste à cacher un message (ou une image dans notre cas) dans un autre ficher qui peut être une image ou un fichier son (.wav...).Le principe est simple: on
-supprimedes données inutiles ou peu utiles pour les remplacer par les données à cacher.
-Par exemple, si l'on prend une image dont chaque pixel est codé sur 24 bits (16 777 216 couleurs) et que l'on en modifie le bit codant faible: on obtient un pixel légèrement modifié mais inchangé pour l'oeil
-humain. C'est le principe qu'utilise le logiciel Sonagets.
 <br>
-<center><h2>Utilisation de Sonagets</h2></center>
-Fonctionnement de Sonagets, choisissez une première image (qui sera l'image portant l'image cachée), une seconde image
-(à cacher), puis lancez le logiciel. Celui-ci va coder cette seconde image dans la première. Celle-ci resortira inchangé
+
+</head>
+	<body>
+		<div class="container">
+			<header class="row">
+			</header>
+		<div class="row">
+			<section class="col-lg-15">
+				<p class="lead "><center><h1>Qu'est ce que Sonagets ? </h1></center>
+			<div class="row">
+			<div class="col-lg-15">
+			<div class="row">
+				<article class="col-lg-15">
+					<p align="justify">C'est un logiciel utilisant la stéganographie. C'est à dire l'art de dissimuler des données dans d'autres données, une image dans une autre image.
+En effet, la stéganographie en informatique consiste à cacher un message (ou une image dans notre cas) dans un autre ficher qui peut être une image ou un fichier son par exemple. Le principe
+est simple: on supprime des données inutiles ou peu utiles pour les remplacer par les données à cacher. Par exemple, si l'on prend une image dont chaque pixel est codé sur 24 bits
+et que l'on en modifie les bits codants faibles, on obtient un pixel légèrement modifié mais inchangé pour l'oeil humain. C'est le principe qu'utilise le logiciel Sonagets. 
+				</article></p>
+			<div class="row">
+				<article class="col-lg-20">
+			<aside>
+				<center><button action="/sonagets.py" class="btn btn-info btn-lg">Téléchargement</button></center>
+			</aside>
+				</article>
+				<article class="col-lg-20">
+				<center><h2>Utilisation de Sonagets</h2></center>
+				</article>
+				<article class="col-lg-20">
+				<p align="justify">Fonctionnement de Sonagets, choisissez une première image (qui sera l'image portant l'image cachée), une seconde image
+(à cacher), puis lancez le logiciel. Celui-ci va "intégrer" le code de cette seconde image dans la première. Celle-ci resortira inchangé
 (visuellement). Vous pourrez à ce moment là tout simplement la concerver, ou l'envoyer à quelqu'un utilisant Sonagets.
-Le logiciel fera ensuite le travail inverse qui consiste à resortir l'image chachée.
-<br><h5>Bonne utilisation</h5>
-<br><br>
-<center><button>Telechargement</button></center>
-
-<br><br><br><center>
-<img src="danger.png"style="width: 60px;"></center>
+Le logiciel fera ensuite le travail inverse qui consiste à récupérer l'image chachée.
 <br>
-Sonagets ne permet pas de dissimuler totalement une image. En effet, l'image peut être soumise à un logiciel chargé de
-traquer les bruits de fond, au quel cas il sera facile de repérer une image stéganographiée et d'effectuer une tentative
-de récupération de celle-ci.</p>
-</div>
-</div>
-
-
+	<h5>Bonne utilisation :)</h5></p>
+<br><br>	
+				</article>
+				<article class="col-lg-15">
+					<img src="danger.png"style="width: 60px;"></center>
+				</article>
+				<article class="col-lg-20">
+					<p align="justify">Sonagets ne permet pas de dissimuler totalement une image. En effet, l'image peut être soumise à un logiciel chargé de traquer les bruits de fond, au quel cas il
+sera assez facile de repérer une image stéganographiée et d'effectuer une tentative de récupération de celle-ci.</p>
+				</article>
+			</div>
+			</div>
+			</div>
+			</section>
+			</div></div>
+</div> 
+		<style>
+#footer {
+  height: 40px;
+  background-color: #5B5B5B;
+  margin-top:200px;
+}
+		</style>
+			<div id="footer" class="navbar-fixed-bottom">
+			<div class="container navbar-fixed-bottom">
+				<h5>Copyright &copy;  &beta;&alpha;&sigma;&tau;&iota;&epsilon;&nu; &amp; &rho;&omicron;&mu;&alpha;&iota;&nu;</h5>
+			<ul class="nav pull-right scroll-top">
+		<li><button class="btn  btn-info btn-lg " ><a href="#" title="Retour haut de page"> <p>&uarr; Retour haut de page &uarr;</p></a></li></button>
+  
+			</ul>
+			</div>
+			</div>
+	</body> 
 
 <script src="jquery.min.js"></script>
 <script src="/dist/js/bootstrap.min.js"></script>
-
-
 </body>
-</html> 
+</html>
